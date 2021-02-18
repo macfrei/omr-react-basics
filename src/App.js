@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import Card from './Card';
-import Button from './Button';
+import { useState } from 'react'
+import Card from './Card'
+import Button from './Button'
 
 function App() {
-  const [isShowingDetails, setIsShowingDetails] = useState(false);
+  const [isShowingDetails, setIsShowingDetails] = useState(false)
 
   function toggleDetails() {
-    setIsShowingDetails(!isShowingDetails);
+    setIsShowingDetails(!isShowingDetails)
   }
 
   function logSomeStuff(stuff) {
-    console.log(stuff);
+    console.log(stuff)
   }
 
   return (
@@ -23,10 +23,13 @@ function App() {
       />
       <Button
         text="Logg me something"
-        clickHandler={() => logSomeStuff('OMR React Basics')} //Wenn eine Funktion einen Parameter übegeben bekommt, muss ich sie als Arrow Funktion an meine Komponente übergeben
+        /*Wenn eine Funktion einen Parameter übegeben bekommt,
+        muss ich sie als Arrow Funktion an meine Komponente
+        übergeben*/
+        clickHandler={() => logSomeStuff('OMR React Basics')}
       />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
